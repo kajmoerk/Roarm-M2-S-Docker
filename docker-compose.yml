@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build:
+    # build from Dockerfile
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+     - .:/app
+    devices:
+     - /dev/ttyUSB0:/dev/ttyUSB0
+    tty: true
